@@ -1,0 +1,36 @@
+{
+  "name": "ArtShow",
+  "version": "1.0.0",
+  "description": "With the ArtShow app, prospective art buyers are able to select artwork based on criteria such as subject matter, size, etc… as well as being able to contact the artist directly with questions or requests for commissioned pieces.   All within an intuitive UI/UX experience.",
+  "main": "paintingsAsJsonAll.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "dev": "nodemon server.js",
+    "load": "npm run loadData && npm run loadIndexes",
+    "loadData": "node load-data.js",
+    "loadIndexes": "node load-indexes.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/estesclan/ArtShow.git"
+  },
+  "keywords": [],
+  "author": "Peter Estes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/estesclan/ArtShow/issues"
+  },
+  "homepage": "https://github.com/estesclan/ArtShow#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "node-http-error": "^2.0.0",
+    "nodemon": "^1.18.3",
+    "pouchdb-adapter-http": "^7.0.0",
+    "pouchdb-core": "^7.0.0",
+    "ramda": "^0.25.0"
+  }
+}
