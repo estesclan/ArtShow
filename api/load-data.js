@@ -16,7 +16,7 @@ db.bulkDocs([
     subject: ["sunsets", "boats", "water"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_charleston-egret",
@@ -25,7 +25,7 @@ db.bulkDocs([
     subject: ["wildlife", "water", "day-scenes"],
     paintingType: ["original", "reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_harbor-race",
@@ -34,7 +34,7 @@ db.bulkDocs([
     subject: ["boats", "water", "day-scenes", "people"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_charleston-harbor-sunset",
@@ -43,7 +43,7 @@ db.bulkDocs([
     subject: ["boats", "water", "sunsets"],
     paintingType: ["original", "reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_church-street-by-night",
@@ -52,7 +52,7 @@ db.bulkDocs([
     subject: ["cityscapes", "people", "night-scenes"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_lights-on-broad-street",
@@ -61,7 +61,7 @@ db.bulkDocs([
     subject: ["cityscapes", "people", "night-scenes"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_lionfish-azure",
@@ -70,7 +70,7 @@ db.bulkDocs([
     subject: ["wildlife", "water", "underwater"],
     paintingType: ["original", "reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_lovers-on-calhoun-and-king",
@@ -79,7 +79,7 @@ db.bulkDocs([
     subject: ["cityscapes", "people", "night-scenes"],
     paintingType: ["original", "reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_magnolia-memories",
@@ -88,7 +88,7 @@ db.bulkDocs([
     subject: ["people", "day-scenes"],
     paintingType: ["original", "reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_myrtle-strand",
@@ -97,7 +97,7 @@ db.bulkDocs([
     subject: ["cityscapes", "water", "night-scenes"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_old-town-evening",
@@ -106,7 +106,7 @@ db.bulkDocs([
     subject: ["cityscapes", "night-scenes"],
     paintingType: ["reproduction"],
     sizes: ["18x24"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_porgy-and-bess-picnic",
@@ -115,7 +115,7 @@ db.bulkDocs([
     subject: ["people", "day-scenes"],
     paintingType: ["original", "reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_ravenel-sunrise",
@@ -124,7 +124,7 @@ db.bulkDocs([
     subject: ["water", "people", "boats", "day-scenes"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_restful-anchor",
@@ -133,7 +133,7 @@ db.bulkDocs([
     subject: ["water", "boats", "sunsets"],
     paintingType: ["original", "reproduction"],
     sizes: ["18x24", "24x36"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_shem-creek-shrimper",
@@ -142,7 +142,7 @@ db.bulkDocs([
     subject: ["water", "boats", "sunsets"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_sirens-song",
@@ -151,7 +151,7 @@ db.bulkDocs([
     subject: ["water", "people", "underwater"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_snob-in-rain",
@@ -160,7 +160,7 @@ db.bulkDocs([
     subject: ["cityscapes", "people", "day-scenes"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_strike-indigo",
@@ -169,7 +169,7 @@ db.bulkDocs([
     subject: ["water", "wildlife", "underwater"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_summer-memories",
@@ -178,7 +178,7 @@ db.bulkDocs([
     subject: ["water", "people", "sunsets"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_sunrise-serenade",
@@ -187,7 +187,7 @@ db.bulkDocs([
     subject: ["water", "boats", "day-scenes"],
     paintingType: ["original", "reproduction"],
     sizes: ["18x24", "24x36"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_sunset-tides",
@@ -196,7 +196,7 @@ db.bulkDocs([
     subject: ["water", "boats", "sunsets", "people"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_that-crab",
@@ -205,7 +205,7 @@ db.bulkDocs([
     subject: ["wildlife", "day-scenes"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   },
   {
     _id: "painting_vibrant-marsh",
@@ -214,7 +214,7 @@ db.bulkDocs([
     subject: ["water", "wildlife", "day-scenes"],
     paintingType: ["reproduction"],
     sizes: ["18x24", "24x36", "32x48"],
-    jpegData: ""
+    jpegData: null
   }
 ])
   .then(result => console.log("success", JSON.stringify(result, null, 2)))

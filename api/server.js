@@ -1,10 +1,17 @@
 require("dotenv").config()
 const PORT = process.env.PORT
-const app = require("express")
+const app = require("express")()
 const bodyParser = require("body-parser")
 const cors = require("cors")
+
+const paintings = require("./routes/paintings")
+const home = require("./routes/home")
+
 app.use(bodyParser.json())
 app.use(cors({ credentials: true }))
+
+paintings(app)
+home(app)
 
 app.use((err, req, res, next) => {
   res.status(err.status || 500).send(err.message)
