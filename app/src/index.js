@@ -5,7 +5,6 @@ import store from "./store"
 import "./index.css"
 import App from "./App"
 import registerServiceWorker from "./registerServiceWorker"
-//import { bindActionCreators } from "../../../../../Library/Caches/typescript/2.9/node_modules/redux"
 import { getPaintings } from "./action-creators/paintings"
 
 ReactDOM.render(
