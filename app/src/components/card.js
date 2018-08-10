@@ -7,10 +7,14 @@ import CardContent from "@material-ui/core/CardContent"
 import CardMedia from "@material-ui/core/CardMedia"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
+import { Link } from "react-router-dom"
+import { pathOr } from "ramda"
 
 const styles = {
   card: {
-    maxWidth: 500
+    width: "100%",
+    maxWidth: 500,
+    marginTop: "20px"
   },
   media: {
     height: 0,
@@ -19,18 +23,23 @@ const styles = {
 }
 
 const ASinglePaintingCard = props => {
-  const { classes, painting } = props
+  const { classes } = props
+
+  const name = pathOr("", ["foo", "name"], props)
+  const jpegData = pathOr("", ["foo", "jpegData"], props)
+  const styleHeight = pathOr(10, ["painting", "styleHeight"], props)
   return (
     <div>
       <Card className={classes.card}>
         <CardMedia
           className={classes.media}
-          image="/jpeg-paintings/Blue-Harbor.jpg" //painting.jpegData
-          title="Porgy and Bess Picnic"
+          style={{ height: styleHeight }}
+          image={`/jpeg-paintings/${jpegData}.jpg`}
+          title={name}
         />
         <CardContent>
           <Typography gutterBottom variant="headline" component="h2">
-            {/*{painting.name}*/} A Mood Painting!
+            {name}
           </Typography>
           <Typography component="p">
             Words about paintings to make you feel like this is an awesome

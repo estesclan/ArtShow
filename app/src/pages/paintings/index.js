@@ -23,26 +23,18 @@ const styles = {
   }
 }
 
-const li = painting => (
-  <li>
-    <ASinglePaintingCard />
-  </li>
-)
+const li = painting => <ASinglePaintingCard foo={painting} ted={9} />
 
 const ListPaintings = props => {
   const { allPaintings } = props
-  console.log(props)
+
   return (
     <React.Fragment>
       <CardContent>
         <Typography gutterBottom variant="headline">
           Here's Some Paintings:
         </Typography>
-        <ul>{map(li, propOr([], "allPaintings", props))}</ul>
-        {/*<List>{map(resource => ResourceListItem(resource), props.resources)}</List>
-        
-        <List>{map(painting => ASinglePaintingCard(painting), props)}</List>
-        */}
+        <ul>{map(li, allPaintings)}</ul>
       </CardContent>
       <ASinglePaintingCard />
     </React.Fragment>
