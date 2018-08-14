@@ -26,7 +26,7 @@ const styles = {
 const li = painting => <ASinglePaintingCard foo={painting} ted={9} />
 
 const ListPaintings = props => {
-  const { allPaintings } = props
+  const { allPaintings, filterOptions } = props
 
   return (
     <React.Fragment>
@@ -42,7 +42,8 @@ const ListPaintings = props => {
 }
 
 const mapStateToProps = state => ({
-  allPaintings: state.paintings
+  allPaintings: state.paintings,
+  filterOptions: state.filterOptions
 })
 
 const connector = connect(mapStateToProps)

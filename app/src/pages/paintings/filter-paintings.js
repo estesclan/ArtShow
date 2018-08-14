@@ -6,11 +6,11 @@ import FormControlLabel from "@material-ui/core/FormControlLabel"
 import FormHelperText from "@material-ui/core/FormHelperText"
 import Switch from "@material-ui/core/Switch"
 import Button from "@material-ui/core/Button"
-import AddIcon from "@material-ui/icons/Add"
 import { withStyles } from "@material-ui/core/styles"
+import { Link } from "react-router-dom"
 
 import { connect } from "react-redux"
-import { append, reject, contains } from "ramda"
+import { contains } from "ramda"
 import {
   FILTERED_PAINTING_PAINTING_SIZE_CHECKED,
   FILTERED_PAINTING_PAINTING_SUBJECT_CHECKED,
@@ -212,14 +212,18 @@ const FilterPaintings = props => {
           <FormHelperText>EVEN MORE MOOD!</FormHelperText>
         </FormControl>
       </React.Fragment>
-      <Button
-        variant="contained"
-        size="large"
-        color="primary"
-        className={classes.button}
-      >
-        Submit
-      </Button>
+      <React.Fragment>
+        <Link to="/paintings" className="router-link">
+          <Button
+            variant="contained"
+            size="large"
+            color="primary"
+            className={classes.button}
+          >
+            Submit
+          </Button>
+        </Link>
+      </React.Fragment>
     </React.Fragment>
   )
 }

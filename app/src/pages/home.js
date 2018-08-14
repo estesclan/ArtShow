@@ -12,7 +12,7 @@ const Home = props => {
       </Typography>
       <img
         alt="Elvis DOES Rock this velvet painting!"
-        src="https://cdn.shopify.com/s/files/1/1083/5516/products/A111_2_400x400.jpg?v=1459492496"
+        src="/jpeg-paintings/carousel-jpegs/Den.jpg"
       />
       <Typography component="p">(or is there?) 0_0</Typography>
     </React.Fragment>
