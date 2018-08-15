@@ -24,7 +24,9 @@ const styles = {
   }
 }
 
-const li = painting => <ASinglePaintingCard foo={painting} ted={9} />
+const li = painting => (
+  <ASinglePaintingCard key={painting.name} foo={painting} ted={9} />
+)
 
 const ListPaintings = props => {
   const { allPaintings, filterOptions } = props
@@ -35,13 +37,13 @@ const ListPaintings = props => {
         <Typography gutterBottom variant="headline">
           Here's Some Paintings:
         </Typography>
-        <ul>{map(li, allPaintings)}</ul>
+        <ul>{map(li, filterOptionsHelper(allPaintings, filterOptions))}</ul>
       </CardContent>
       <ASinglePaintingCard />
     </React.Fragment>
   )
 }
-//filterOptionsHelper(paintings, filterOptions)
+
 const mapStateToProps = state => ({
   allPaintings: state.paintings,
   filterOptions: state.filterOptions

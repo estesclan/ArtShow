@@ -1,14 +1,16 @@
 import { contains, always, anyPass, allPass, compose, filter } from "ramda"
 
 export default (paintings, filterOptions) => {
+  console.log({ filterOptions })
+  console.log({ paintings })
   const filterSizes = () => {
-    const predicate18 = contains("18x24", filterOptions)
+    const predicate18 = contains("18x24", filterOptions.size)
       ? painting => contains("18x24", painting.sizes)
       : always(false)
-    const predicate24 = contains("24x36", filterOptions)
+    const predicate24 = contains("24x36", filterOptions.size)
       ? painting => contains("24x36", painting.sizes)
       : always(false)
-    const predicate32 = contains("32x48", filterOptions)
+    const predicate32 = contains("32x48", filterOptions.size)
       ? painting => contains("32x48", painting.sizes)
       : always(false)
     const filteredSizePaintings = filter(
