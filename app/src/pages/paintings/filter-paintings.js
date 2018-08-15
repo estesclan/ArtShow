@@ -234,6 +234,7 @@ const mapStateToProps = state => {
     medium: contains("24x36", state.filterOptions.size),
     large: contains("32x48", state.filterOptions.size),
     size: state.filterOptions.size,
+    filterOptions: state.filterOptions,
     sunsets: contains("sunsets", state.filterOptions.subject),
     cityscapes: contains("cityscapes", state.filterOptions.subject),
     wildlife: contains("wildlife", state.filterOptions.subject),
