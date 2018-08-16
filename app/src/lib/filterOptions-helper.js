@@ -18,5 +18,29 @@ export default (paintings, filterOptions) => {
     )
     return filteredSizePaintings
   }
-  return compose(filterSizes())(paintings)
+  ///////////
+  const filterTypes = () => {
+    const predicateOrig = contains("original", filterOptions.paintingType)
+      ? painting => contains("original", painting.paintingType)
+      : always(false)
+    const predicateRepro = contains("reproduction", filterOptions.paintingType)
+      ? painting => contains("reproduction", painting.paintingType)
+      : always(false)
+    const filteredTypePaintings = filter(
+      anyPass([predicateOrig, predicateRepro])
+    )
+    return filteredTypePaintings
+  }
+  //console.log("filterTypes", filterTypes(paintings))
+  console.log(
+    "compose",
+    compose(
+      filterTypes(),
+      filterSizes()
+    )(paintings)
+  )
+  return compose(
+    filterTypes(),
+    filterSizes()
+  )(paintings)
 }

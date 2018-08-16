@@ -45,12 +45,6 @@ const FilterPaintings = props => {
     reproduction
   } = props
 
-  console.log({
-    handleSizeChanged,
-    handleSubjectChanged,
-    handleTypeChanged
-  })
-
   return (
     <React.Fragment>
       <React.Fragment>
