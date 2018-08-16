@@ -46,10 +46,26 @@ const FilterPaintings = props => {
   } = props
 
   return (
-    <React.Fragment>
-      <React.Fragment>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        margin: 25
+      }}
+    >
+      <div
+        style={{
+          width: 300,
+          display: "flex",
+          flexDirection: "column",
+          padding: 25
+        }}
+      >
         <FormControl component="fieldset">
-          <FormLabel component="legend">Choose your size:</FormLabel>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <FormLabel component="legend">Choose your size:</FormLabel>
+          </div>
           <FormGroup>
             <FormControlLabel
               control={
@@ -84,11 +100,27 @@ const FilterPaintings = props => {
           </FormGroup>
           <FormHelperText>MOOD</FormHelperText>
         </FormControl>
-      </React.Fragment>
+      </div>
       {/*/////////////////////////////////////*/}
-      <React.Fragment>
+      <div
+        style={{
+          width: 300,
+          display: "flex",
+          flexDirection: "column",
+          padding: 25
+        }}
+      >
         <FormControl component="fieldset">
-          <FormLabel component="legend">Choose your subject matter:</FormLabel>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center"
+            }}
+          >
+            <FormLabel component="legend">
+              Choose your subject matter:
+            </FormLabel>
+          </div>
           <FormGroup>
             <FormControlLabel
               control={
@@ -171,14 +203,24 @@ const FilterPaintings = props => {
               label="Day Scenes"
             />
           </FormGroup>
+
           <FormHelperText>MORE MOOD</FormHelperText>
         </FormControl>
-      </React.Fragment>
+      </div>
       {/*/////////////////////////////////////*/}
 
-      <React.Fragment>
+      <div
+        style={{
+          width: 300,
+          display: "flex",
+          flexDirection: "column",
+          padding: 25
+        }}
+      >
         <FormControl component="fieldset">
-          <FormLabel component="legend">Choose your type:</FormLabel>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <FormLabel component="legend">Choose your type:</FormLabel>
+          </div>
           <FormGroup>
             <FormControlLabel
               control={
@@ -205,9 +247,13 @@ const FilterPaintings = props => {
           </FormGroup>
           <FormHelperText>EVEN MORE MOOD!</FormHelperText>
         </FormControl>
-      </React.Fragment>
-      <React.Fragment>
-        <Link to="/paintings" className="router-link">
+      </div>
+      <div>
+        <Link
+          to="/paintings"
+          className="router-link"
+          style={{ textDecoration: "none" }}
+        >
           <Button
             variant="contained"
             size="large"
@@ -217,8 +263,8 @@ const FilterPaintings = props => {
             Submit
           </Button>
         </Link>
-      </React.Fragment>
-    </React.Fragment>
+      </div>
+    </div>
   )
 }
 

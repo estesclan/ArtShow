@@ -39,7 +39,6 @@ const ListPaintings = props => {
         </Typography>
         <ul>{map(li, filterOptionsHelper(allPaintings, filterOptions))}</ul>
       </CardContent>
-      <ASinglePaintingCard />
     </React.Fragment>
   )
 }
