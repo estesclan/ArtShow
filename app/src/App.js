@@ -15,7 +15,6 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/paintings" component={ListPaintings} />
           <Route exact path="/paintings/filter" component={FilterPaintings} />
-
           <Route exact path="/paintings/:id/view" component={PaintingView} />
           <Route exact path="/aboutme" component={AboutMe} />
         </Switch>
