@@ -25,9 +25,10 @@ const styles = {
 const ASinglePaintingCard = props => {
   const { classes } = props
 
-  const name = pathOr("", ["foo", "name"], props)
+  const name = pathOr("", ["painting", "name"], props)
+  const id = pathOr("", ["painting", "_id"], props)
 
-  const jpegData = pathOr("", ["foo", "jpegData"], props)
+  const jpegData = pathOr("", ["painting", "jpegData"], props)
   const styleHeight = pathOr(10, ["painting", "styleHeight"], props)
   return (
     <div>
@@ -49,7 +50,7 @@ const ASinglePaintingCard = props => {
         </CardContent>
         <CardActions>
           <Link
-            to={`/paintings/${name}/view`}
+            to={`/paintings/${id}/view`}
             className="router-link"
             style={{ textDecoration: "none" }}
           >

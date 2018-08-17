@@ -1,7 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import { withStyles } from "@material-ui/core/styles"
-
+import { find } from "ramda"
 const styles = {
   card: {
     maxWidth: 345
@@ -13,20 +13,22 @@ const styles = {
 }
 
 const ViewPainting = props => {
-  const { currentPainting } = props
-  console.log("props.match.params", props.match.params)
-  console.log(currentPainting)
+  const { paintings } = props
+
+  const currentPainting = find(p => p._id === props.match.params.id, paintings)
+  //console.log("props.match.params", props.match.params)
+  //console.log(currentPainting)
   return (
-    <h1>
-      Here's the dang name: {currentPainting.name}
-      "{props.match.params.id}"
-    </h1>
+    <div>
+      <h1>{currentPainting.name}</h1>
+      <img src={`/jpeg-paintings/${currentPainting.jpegData}.jpg`} />
+    </div>
   )
 }
 
 const mapStateToProps = state => {
   return {
-    currentPainting: state.paintings
+    paintings: state.paintings
   }
 }
 const connector = connect(mapStateToProps)
