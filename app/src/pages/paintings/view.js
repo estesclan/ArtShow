@@ -16,10 +16,18 @@ const ViewPainting = props => {
   const { paintings } = props
 
   const currentPainting = find(p => p._id === props.match.params.id, paintings)
-  //console.log("props.match.params", props.match.params)
-  //console.log(currentPainting)
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        flexGrow: 1,
+        backgroundColor: "gray"
+      }}
+      className="white vh-100"
+    >
       <h1>{currentPainting.name}</h1>
       <img src={`/jpeg-paintings/${currentPainting.jpegData}.jpg`} />
     </div>
