@@ -50,7 +50,9 @@ const FilterPaintings = props => {
       style={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "center"
+        alignItems: "center",
+        color: "white",
+        backgroundColor: "gray"
       }}
     >
       <div

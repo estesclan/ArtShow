@@ -6,18 +6,26 @@ const Home = props => {
   const { Homepaintings } = props
   console.log(props)
   return (
-    <center display="flex" align-items="center" justify-content="center">
-      <React.Fragment>
-        <Typography gutterBottom variant="headline">
-          There's no place like home: {props.Homepaintings}
-        </Typography>
-        <img
-          alt="Elvis DOES Rock this velvet painting!"
-          src="/jpeg-paintings/carousel-jpegs/Den.jpg"
-        />
-        <Typography component="p">(or is there?) 0_0</Typography>
-      </React.Fragment>
-    </center>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        flexGrow: 1,
+        backgroundColor: "gray"
+      }}
+      className="white vh-100"
+    >
+      <Typography gutterBottom variant="headline">
+        There's no place like home: {props.Homepaintings}
+      </Typography>
+      <img
+        alt="Elvis DOES Rock this velvet painting!"
+        src="/jpeg-paintings/carousel-jpegs/Den.jpg"
+      />
+      <Typography component="p">(or is there?) 0_0</Typography>
+    </div>
   )
 }
 

@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { withStyles } from "@material-ui/core/styles"
 import { find } from "ramda"
+
 const styles = {
   card: {
     maxWidth: 345
@@ -26,10 +27,14 @@ const ViewPainting = props => {
         flexGrow: 1,
         backgroundColor: "gray"
       }}
-      className="white vh-100"
+      className="white vh-100 ph3"
     >
       <h1>{currentPainting.name}</h1>
-      <img src={`/jpeg-paintings/${currentPainting.jpegData}.jpg`} />
+      <img
+        className="shadow-3"
+        src={`/jpeg-paintings/${currentPainting.jpegData}.jpg`}
+      />
+      <p>Acrylic on canvas with palette knife.</p>
     </div>
   )
 }
