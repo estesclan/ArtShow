@@ -53,8 +53,8 @@ const FilterPaintings = props => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        color: "white",
-        backgroundColor: "gray"
+        color: "white"
+        //backgroundColor: "gray"
       }}
     >
       <div
@@ -276,7 +276,7 @@ const FilterPaintings = props => {
           <FormHelperText />
         </FormControl>
       </div>
-      <div style={{ marginBottom: 70 }}>
+      <div style={{ marginBottom: 70, marginTop: 10 }}>
         <Link
           to="/paintings"
           className="router-link"

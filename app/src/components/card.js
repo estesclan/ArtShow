@@ -54,7 +54,7 @@ const ASinglePaintingCard = props => {
             className="router-link"
             style={{ textDecoration: "none" }}
           >
-            <Button size="small" color="primary">
+            <Button size="small" color="secondary">
               Learn More
             </Button>
           </Link>

@@ -10,11 +10,11 @@ const Home = props => {
   return (
     <div
       style={{
-        //display: "flex",
-        //flexDirection: "column",
-        //alignItems: "center",
-        //justifyContent: "center",
-        //flexGrow: 1,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        flexGrow: 1,
         backgroundColor: "gray"
       }}
       className="vh-100"
@@ -23,12 +23,12 @@ const Home = props => {
 
       <img
         style={{
-          // display: "flex",
-          // flexDirection: "column",
-          // alignItems: "center",
-          // justifyContent: "center",
-          height: "100%",
-          width: "500%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "200rem",
+          //width: "auto",
           marginTop: 80
 
           //width: "200%"

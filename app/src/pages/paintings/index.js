@@ -30,14 +30,14 @@ const ListPaintings = props => {
       style={{
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        backgroundColor: "gray"
+        alignItems: "center"
+        //backgroundColor: "gray"
       }}
     >
-      <MenuAppBar />
+      <MenuAppBar title="Your List of Paintings:" />
 
-      <CardContent>
-        <h2
+      <CardContent style={{ paddingTop: 60 }}>
+        {/* <h2
           style={{
             display: "flex",
             justifyContent: "center",
@@ -46,7 +46,7 @@ const ListPaintings = props => {
           }}
         >
           Your List of Paintings:
-        </h2>
+        </h2> */}
         <ul>{map(li, filterOptionsHelper(allPaintings, filterOptions))}</ul>
       </CardContent>
     </div>
