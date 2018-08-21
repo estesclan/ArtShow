@@ -10,9 +10,8 @@ import DraftsIcon from "@material-ui/icons/Drafts"
 import { Link } from "react-router-dom"
 import { connect } from "react-redux"
 import { DRAWER_TOGGLED } from "../constants"
-import { CameraEnhance } from "@material-ui/icons"
 
-const VeteranListItems = (
+const MenuItems = (
   <div>
     <Link to="/" className="router-link">
       <ListItem button>
@@ -23,39 +22,14 @@ const VeteranListItems = (
       </ListItem>
     </Link>
 
-    <Link to="/paintings" className="router-link">
-      <ListItem button>
-        <ListItemIcon>
-          <DraftsIcon />
-        </ListItemIcon>
-        <ListItemText primary="Categories" />
-      </ListItem>
-    </Link>
-
-    {/* <Link to="/resources" className="router-link">
-      <ListItem button>
-        <ListItemIcon>
-          <InboxIcon />
-        </ListItemIcon>
-        <ListItemText primary="Resources" />
-      </ListItem>
-    </Link>
-    <Link to="/events/new" className="router-link">
+    <Link to="/paintings/filter" className="router-link">
       <ListItem button>
         <ListItemIcon>
           <StarIcon />
         </ListItemIcon>
-        <ListItemText primary="Add Event" />
+        <ListItemText primary="Filter Paintings" />
       </ListItem>
     </Link>
-    <Link to="/categories/new" className="router-link">
-      <ListItem button>
-        <ListItemIcon>
-          <CameraEnhance />
-        </ListItemIcon>
-        <ListItemText primary="Add Category" />
-      </ListItem>
-    </Link> */}
   </div>
 )
 
@@ -66,7 +40,7 @@ const withDrawer = function(PageComponent) {
         <PageComponent {...props} />
         <Drawer open={props.open} onClose={props.toggleDrawer(props.open)}>
           <div tabIndex={0} role="button">
-            {VeteranListItems}
+            {MenuItems}
           </div>
         </Drawer>
       </div>

@@ -1,6 +1,8 @@
 import React from "react"
 import { connect } from "react-redux"
 import Typography from "@material-ui/core/Typography"
+import withDrawer from "../components/withDrawer"
+import MenuAppBar from "../components/menuAppBar"
 
 const Home = props => {
   const { Homepaintings } = props
@@ -8,19 +10,31 @@ const Home = props => {
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        flexGrow: 1,
+        //display: "flex",
+        //flexDirection: "column",
+        //alignItems: "center",
+        //justifyContent: "center",
+        //flexGrow: 1,
         backgroundColor: "gray"
       }}
-      className="white vh-100"
+      className="vh-100"
     >
-      <Typography gutterBottom variant="headline">
-        There's no place like home: {props.Homepaintings}
-      </Typography>
+      <MenuAppBar title="ArtShow" />
+
       <img
+        style={{
+          // display: "flex",
+          // flexDirection: "column",
+          // alignItems: "center",
+          // justifyContent: "center",
+          height: "100%",
+          width: "500%",
+          marginTop: 80
+
+          //width: "200%"
+          //flexGrow: 1,
+          //backgroundColor: "gray"
+        }}
         alt="Elvis DOES Rock this velvet painting!"
         src="/jpeg-paintings/carousel-jpegs/Den.jpg"
       />
@@ -35,4 +49,4 @@ const mapStateToProps = state => ({
 
 const connector = connect(mapStateToProps)
 
-export default connector(Home)
+export default withDrawer(connector(Home))

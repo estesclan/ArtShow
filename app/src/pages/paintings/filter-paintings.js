@@ -4,6 +4,8 @@ import FormControl from "@material-ui/core/FormControl"
 import FormGroup from "@material-ui/core/FormGroup"
 import FormControlLabel from "@material-ui/core/FormControlLabel"
 import FormHelperText from "@material-ui/core/FormHelperText"
+import withDrawer from "../../components/withDrawer"
+import MenuAppBar from "../../components/menuAppBar"
 import Switch from "@material-ui/core/Switch"
 import Button from "@material-ui/core/Button"
 import { withStyles } from "@material-ui/core/styles"
@@ -60,12 +62,26 @@ const FilterPaintings = props => {
           width: 300,
           display: "flex",
           flexDirection: "column",
-          padding: 25
+          paddingTop: 15,
+          paddingLeft: 8,
+          marginTop: 80,
+          marginBottom: 20,
+          borderRadius: 15,
+          backgroundColor: "#797979"
         }}
+        className="shadow-4"
       >
+        <MenuAppBar title="Filter Paintings" />
         <FormControl component="fieldset">
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <FormLabel component="legend">Choose your size:</FormLabel>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center"
+            }}
+          >
+            <FormLabel style={{ color: "white" }} component="legend">
+              Choose your size:
+            </FormLabel>
           </div>
           <FormGroup>
             <FormControlLabel
@@ -99,7 +115,7 @@ const FilterPaintings = props => {
               label="32x48"
             />
           </FormGroup>
-          <FormHelperText>MOOD</FormHelperText>
+          <FormHelperText />
         </FormControl>
       </div>
       {/*/////////////////////////////////////*/}
@@ -108,8 +124,13 @@ const FilterPaintings = props => {
           width: 300,
           display: "flex",
           flexDirection: "column",
-          padding: 25
+          paddingTop: 15,
+          paddingLeft: 8,
+          marginBottom: 20,
+          borderRadius: 15,
+          backgroundColor: "#797979"
         }}
+        className="shadow-4"
       >
         <FormControl component="fieldset">
           <div
@@ -118,7 +139,7 @@ const FilterPaintings = props => {
               justifyContent: "center"
             }}
           >
-            <FormLabel component="legend">
+            <FormLabel style={{ color: "white" }} component="legend">
               Choose your subject matter:
             </FormLabel>
           </div>
@@ -205,7 +226,7 @@ const FilterPaintings = props => {
             />
           </FormGroup>
 
-          <FormHelperText>MORE MOOD</FormHelperText>
+          <FormHelperText />
         </FormControl>
       </div>
       {/*/////////////////////////////////////*/}
@@ -215,12 +236,18 @@ const FilterPaintings = props => {
           width: 300,
           display: "flex",
           flexDirection: "column",
-          padding: 25
+          paddingTop: 15,
+          paddingLeft: 8,
+          borderRadius: 15,
+          backgroundColor: "#797979"
         }}
+        className="shadow-4"
       >
         <FormControl component="fieldset">
           <div style={{ display: "flex", justifyContent: "center" }}>
-            <FormLabel component="legend">Choose your type:</FormLabel>
+            <FormLabel style={{ color: "white" }} component="legend">
+              Choose your type:
+            </FormLabel>
           </div>
           <FormGroup>
             <FormControlLabel
@@ -246,10 +273,10 @@ const FilterPaintings = props => {
               label="Reproduction"
             />
           </FormGroup>
-          <FormHelperText>EVEN MORE MOOD!</FormHelperText>
+          <FormHelperText />
         </FormControl>
       </div>
-      <div>
+      <div style={{ marginBottom: 70 }}>
         <Link
           to="/paintings"
           className="router-link"
@@ -317,4 +344,4 @@ const connector = connect(
   mapActionsToProps
 )
 
-export default connector(withStyles(styles)(FilterPaintings))
+export default withDrawer(connector(withStyles(styles)(FilterPaintings)))

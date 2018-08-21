@@ -5,6 +5,8 @@ import CardContent from "@material-ui/core/CardContent"
 import filterOptionsHelper from "../../lib/filterOptions-helper"
 import { map } from "ramda"
 import ASinglePaintingCard from "../../components/card"
+import withDrawer from "../../components/withDrawer"
+import MenuAppBar from "../../components/menuAppBar"
 
 const styles = {
   card: {
@@ -32,9 +34,16 @@ const ListPaintings = props => {
         backgroundColor: "gray"
       }}
     >
+      <MenuAppBar />
+
       <CardContent>
         <h2
-          style={{ display: "flex", justifyContent: "center", color: "white" }}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            color: "white",
+            paddingTop: 50
+          }}
         >
           Your List of Paintings:
         </h2>
@@ -51,4 +60,4 @@ const mapStateToProps = state => ({
 
 const connector = connect(mapStateToProps)
 
-export default connector(withStyles(styles)(ListPaintings))
+export default withDrawer(connector(withStyles(styles)(ListPaintings)))

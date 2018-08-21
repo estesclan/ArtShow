@@ -33,7 +33,14 @@ const MenuAppBar = props => {
     <div className={classes.root}>
       <AppBar position="fixed">
         <Toolbar>
-          <React.Fragment>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              width: "100%",
+              alignItems: "center"
+            }}
+          >
             {props.backArrow ? (
               <IconButton onClick={e => props.history.goBack()}>
                 <ChevronLeft
@@ -51,10 +58,20 @@ const MenuAppBar = props => {
                 <MenuIcon />
               </IconButton>
             )}
-          </React.Fragment>
-          <Typography variant="title" color="inherit" className={classes.flex}>
-            {props.title}
-          </Typography>
+
+            <Typography
+              variant="title"
+              color="inherit"
+              className={classes.flex}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center"
+              }}
+            >
+              {props.title}
+            </Typography>
+          </div>
         </Toolbar>
       </AppBar>
     </div>
