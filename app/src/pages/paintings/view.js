@@ -25,7 +25,6 @@ const ViewPainting = props => {
         alignItems: "center",
         justifyContent: "center",
         flexGrow: 1
-        //backgroundColor: "gray"
       }}
       className="white vh-100 ph3"
     >
