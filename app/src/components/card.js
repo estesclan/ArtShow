@@ -44,8 +44,9 @@ const ASinglePaintingCard = props => {
             {name}
           </Typography>
           <Typography component="p">
-            Words about paintings to make you feel like this is an awesome
-            painting.
+            Acrylic on canvas with palette knife in heavy impasto. <br />
+            Peter’s distinctive "Vibrant Impressionism" style evokes warm
+            feelings, rather than telling a story…
           </Typography>
         </CardContent>
         <CardActions>

@@ -33,7 +33,11 @@ const ViewPainting = props => {
         className="shadow-3"
         src={`/jpeg-paintings/${currentPainting.jpegData}.jpg`}
       />
-      <p>Acrylic on canvas with palette knife.</p>
+      <p style={{ textAlign: "center" }}>
+        Acrylic on canvas with palette knife in heavy impasto. <br />
+        Peter’s distinctive "Vibrant Impressionism" style evokes warm feelings,
+        rather than telling a story…
+      </p>
     </div>
   )
 }
