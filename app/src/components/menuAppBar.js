@@ -66,7 +66,8 @@ const MenuAppBar = props => {
               style={{
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center"
+                justifyContent: "center",
+                marginLeft: 10
               }}
             >
               {props.title}

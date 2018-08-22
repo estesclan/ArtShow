@@ -16,7 +16,8 @@ import { contains } from "ramda"
 import {
   FILTERED_PAINTING_PAINTING_SIZE_CHECKED,
   FILTERED_PAINTING_PAINTING_SUBJECT_CHECKED,
-  FILTERED_PAINTING_PAINTING_TYPE_CHECKED
+  FILTERED_PAINTING_PAINTING_TYPE_CHECKED,
+  FILTERED_PAINTING_PAINTING_FORM_RESET
 } from "../../constants"
 
 const styles = theme => ({
@@ -25,278 +26,283 @@ const styles = theme => ({
   }
 })
 
-const FilterPaintings = props => {
-  const {
-    classes,
-    withStyles,
-    handleSizeChanged,
-    small,
-    medium,
-    large,
-    handleSubjectChanged,
-    sunsets,
-    cityscapes,
-    wildlife,
-    water,
-    boats,
-    people,
-    nightScenes,
-    dayScenes,
-    handleTypeChanged,
-    original,
-    reproduction
-  } = props
+class FilterPaintings extends React.Component {
+  componentDidMount() {
+    const { resetFilterForm } = this.props
+    resetFilterForm()
+  }
+  render() {
+    const {
+      classes,
+      handleSizeChanged,
+      small,
+      medium,
+      large,
+      handleSubjectChanged,
+      sunsets,
+      cityscapes,
+      wildlife,
+      water,
+      boats,
+      people,
+      nightScenes,
+      dayScenes,
+      handleTypeChanged,
+      original,
+      reproduction
+    } = this.props
 
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        color: "white"
-        //backgroundColor: "gray"
-      }}
-    >
+    return (
       <div
         style={{
-          width: 300,
           display: "flex",
           flexDirection: "column",
-          paddingTop: 15,
-          paddingLeft: 8,
-          marginTop: 80,
-          marginBottom: 20,
-          borderRadius: 15,
-          backgroundColor: "#797979"
+          alignItems: "center",
+          color: "white"
         }}
-        className="shadow-4"
       >
-        <MenuAppBar title="Filter Paintings" />
-        <FormControl component="fieldset">
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center"
-            }}
-          >
-            <FormLabel style={{ color: "white" }} component="legend">
-              Choose your size:
-            </FormLabel>
-          </div>
-          <FormGroup>
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={small}
-                  onChange={handleSizeChanged("18x24")}
-                  value="18x24"
-                />
-              }
-              label="18x24"
-            />
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={medium}
-                  onChange={handleSizeChanged("24x36")}
-                  value="24x36"
-                />
-              }
-              label="24x36"
-            />
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={large}
-                  onChange={handleSizeChanged("32x48")}
-                  value="32x48"
-                />
-              }
-              label="32x48"
-            />
-          </FormGroup>
-          <FormHelperText />
-        </FormControl>
-      </div>
-      {/*/////////////////////////////////////*/}
-      <div
-        style={{
-          width: 300,
-          display: "flex",
-          flexDirection: "column",
-          paddingTop: 15,
-          paddingLeft: 8,
-          marginBottom: 20,
-          borderRadius: 15,
-          backgroundColor: "#797979"
-        }}
-        className="shadow-4"
-      >
-        <FormControl component="fieldset">
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center"
-            }}
-          >
-            <FormLabel style={{ color: "white" }} component="legend">
-              Choose your subject matter:
-            </FormLabel>
-          </div>
-          <FormGroup>
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={sunsets}
-                  onChange={handleSubjectChanged("sunsets")}
-                  value="sunsets"
-                />
-              }
-              label="Sunsets"
-            />
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={cityscapes}
-                  onChange={handleSubjectChanged("cityscapes")}
-                  value="cityscapes"
-                />
-              }
-              label="Cityscapes"
-            />
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={wildlife}
-                  onChange={handleSubjectChanged("wildlife")}
-                  value="wildlife"
-                />
-              }
-              label="Wildlife"
-            />
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={water}
-                  onChange={handleSubjectChanged("water")}
-                  value="water"
-                />
-              }
-              label="Water"
-            />
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={boats}
-                  onChange={handleSubjectChanged("boats")}
-                  value="boats"
-                />
-              }
-              label="Boats"
-            />
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={people}
-                  onChange={handleSubjectChanged("people")}
-                  value="people"
-                />
-              }
-              label="People"
-            />
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={nightScenes}
-                  onChange={handleSubjectChanged("nightScenes")}
-                  value="nightScenes"
-                />
-              }
-              label="Night Scenes"
-            />
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={dayScenes}
-                  onChange={handleSubjectChanged("dayScenes")}
-                  value="dayScenes"
-                />
-              }
-              label="Day Scenes"
-            />
-          </FormGroup>
-
-          <FormHelperText />
-        </FormControl>
-      </div>
-      {/*/////////////////////////////////////*/}
-
-      <div
-        style={{
-          width: 300,
-          display: "flex",
-          flexDirection: "column",
-          paddingTop: 15,
-          paddingLeft: 8,
-          borderRadius: 15,
-          backgroundColor: "#797979"
-        }}
-        className="shadow-4"
-      >
-        <FormControl component="fieldset">
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <FormLabel style={{ color: "white" }} component="legend">
-              Choose your type:
-            </FormLabel>
-          </div>
-          <FormGroup>
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={original}
-                  onChange={handleTypeChanged("original")}
-                  value="original"
-                />
-              }
-              label="Original"
-            />
-          </FormGroup>
-          <FormGroup>
-            <FormControlLabel
-              control={
-                <Switch
-                  checked={reproduction}
-                  onChange={handleTypeChanged("reproduction")}
-                  value="reproduction"
-                />
-              }
-              label="Reproduction"
-            />
-          </FormGroup>
-          <FormHelperText />
-        </FormControl>
-      </div>
-      <div style={{ marginBottom: 70, marginTop: 10 }}>
-        <Link
-          to="/paintings"
-          className="router-link"
-          style={{ textDecoration: "none" }}
+        <div
+          style={{
+            width: 300,
+            display: "flex",
+            flexDirection: "column",
+            paddingTop: 15,
+            paddingLeft: 8,
+            marginTop: 80,
+            marginBottom: 20,
+            borderRadius: 15,
+            backgroundColor: "#797979"
+          }}
+          className="shadow-4"
         >
-          <Button
-            variant="contained"
-            size="large"
-            color="primary"
-            className={classes.button}
+          <MenuAppBar title="Filter Paintings" />
+          <FormControl component="fieldset">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center"
+              }}
+            >
+              <FormLabel style={{ color: "white" }} component="legend">
+                Choose your size:
+              </FormLabel>
+            </div>
+            <FormGroup>
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={small}
+                    onChange={handleSizeChanged("18x24")}
+                    value="18x24"
+                  />
+                }
+                label="18x24"
+              />
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={medium}
+                    onChange={handleSizeChanged("24x36")}
+                    value="24x36"
+                  />
+                }
+                label="24x36"
+              />
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={large}
+                    onChange={handleSizeChanged("32x48")}
+                    value="32x48"
+                  />
+                }
+                label="32x48"
+              />
+            </FormGroup>
+            <FormHelperText />
+          </FormControl>
+        </div>
+        {/*/////////////////////////////////////*/}
+        <div
+          style={{
+            width: 300,
+            display: "flex",
+            flexDirection: "column",
+            paddingTop: 15,
+            paddingLeft: 8,
+            marginBottom: 20,
+            borderRadius: 15,
+            backgroundColor: "#797979"
+          }}
+          className="shadow-4"
+        >
+          <FormControl component="fieldset">
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center"
+              }}
+            >
+              <FormLabel style={{ color: "white" }} component="legend">
+                Choose your subject matter:
+              </FormLabel>
+            </div>
+            <FormGroup>
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={sunsets}
+                    onChange={handleSubjectChanged("sunsets")}
+                    value="sunsets"
+                  />
+                }
+                label="Sunsets"
+              />
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={cityscapes}
+                    onChange={handleSubjectChanged("cityscapes")}
+                    value="cityscapes"
+                  />
+                }
+                label="Cityscapes"
+              />
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={wildlife}
+                    onChange={handleSubjectChanged("wildlife")}
+                    value="wildlife"
+                  />
+                }
+                label="Wildlife"
+              />
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={water}
+                    onChange={handleSubjectChanged("water")}
+                    value="water"
+                  />
+                }
+                label="Water"
+              />
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={boats}
+                    onChange={handleSubjectChanged("boats")}
+                    value="boats"
+                  />
+                }
+                label="Boats"
+              />
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={people}
+                    onChange={handleSubjectChanged("people")}
+                    value="people"
+                  />
+                }
+                label="People"
+              />
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={nightScenes}
+                    onChange={handleSubjectChanged("nightScenes")}
+                    value="nightScenes"
+                  />
+                }
+                label="Night Scenes"
+              />
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={dayScenes}
+                    onChange={handleSubjectChanged("dayScenes")}
+                    value="dayScenes"
+                  />
+                }
+                label="Day Scenes"
+              />
+            </FormGroup>
+
+            <FormHelperText />
+          </FormControl>
+        </div>
+        {/*/////////////////////////////////////*/}
+
+        <div
+          style={{
+            width: 300,
+            display: "flex",
+            flexDirection: "column",
+            paddingTop: 15,
+            paddingLeft: 8,
+            borderRadius: 15,
+            backgroundColor: "#797979"
+          }}
+          className="shadow-4"
+        >
+          <FormControl component="fieldset">
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <FormLabel style={{ color: "white" }} component="legend">
+                Choose your type:
+              </FormLabel>
+            </div>
+            <FormGroup>
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={original}
+                    onChange={handleTypeChanged("original")}
+                    value="original"
+                  />
+                }
+                label="Original"
+              />
+            </FormGroup>
+            <FormGroup>
+              <FormControlLabel
+                control={
+                  <Switch
+                    checked={reproduction}
+                    onChange={handleTypeChanged("reproduction")}
+                    value="reproduction"
+                  />
+                }
+                label="Reproduction"
+              />
+            </FormGroup>
+            <FormHelperText />
+          </FormControl>
+        </div>
+        <div style={{ marginBottom: 70, marginTop: 10 }}>
+          <Link
+            to="/paintings"
+            className="router-link"
+            style={{ textDecoration: "none" }}
           >
-            Submit
-          </Button>
-        </Link>
+            <Button
+              variant="contained"
+              size="large"
+              color="primary"
+              className={classes.button}
+            >
+              Submit
+            </Button>
+          </Link>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 const mapStateToProps = state => {
+  console.log("filter options", JSON.stringify(state.filterOptions))
   return {
     small: contains("18x24", state.filterOptions.size),
     medium: contains("24x36", state.filterOptions.size),
@@ -334,6 +340,12 @@ const mapActionsToProps = dispatch => {
       dispatch({
         type: FILTERED_PAINTING_PAINTING_TYPE_CHECKED,
         payload: paintingType
+      })
+    },
+    resetFilterForm: () => {
+      console.log("in reset!")
+      dispatch({
+        type: FILTERED_PAINTING_PAINTING_FORM_RESET
       })
     }
   }

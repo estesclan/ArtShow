@@ -1,7 +1,8 @@
 import {
   FILTERED_PAINTING_PAINTING_SIZE_CHECKED,
   FILTERED_PAINTING_PAINTING_SUBJECT_CHECKED,
-  FILTERED_PAINTING_PAINTING_TYPE_CHECKED
+  FILTERED_PAINTING_PAINTING_TYPE_CHECKED,
+  FILTERED_PAINTING_PAINTING_FORM_RESET
 } from "../constants"
 import { merge, contains, reject, append } from "ramda"
 const initialState = {
@@ -39,6 +40,8 @@ export const filterOptions = (state = initialState, action) => {
         : merge(state, {
             paintingType: append(action.payload, state.paintingType)
           })
+    case FILTERED_PAINTING_PAINTING_FORM_RESET:
+      return initialState
     default:
       return state
   }

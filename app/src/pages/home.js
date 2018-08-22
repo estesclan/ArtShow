@@ -8,6 +8,7 @@ import { withStyles } from "@material-ui/core/styles"
 import withDrawer from "../components/withDrawer"
 import MenuAppBar from "../components/menuAppBar"
 import Carousel from "react-image-carousel"
+//require(“../../node_modules/react-image-carousel/lib/css/main.min.css”)
 const styles = theme => ({
   button: {
     margin: theme.spacing.unit
@@ -28,12 +29,12 @@ const Home = props => {
   return (
     <div>
       <MenuAppBar title="ArtShow" />
-      <div style={{ marginTop: 120 }}>
+      <div className="my-carousel" style={{ marginTop: 120 }}>
         <Carousel images={images} thumb={true} loop={true} autoplay={3000} />
       </div>
       <div
         style={{
-          marginTop: 10,
+          marginTop: -85,
           display: "flex",
           flexDirection: "column",
           alignItems: "center"
