@@ -8,7 +8,7 @@ import tachyons from "tachyons"
 import App from "./App"
 import registerServiceWorker from "./registerServiceWorker"
 import { getPaintings } from "./action-creators/paintings"
-import { deepPurple, amber, indigo, black } from "@material-ui/core/colors"
+import { amber } from "@material-ui/core/colors"
 import { CssBaseline } from "@material-ui/core"
 
 const theme = createMuiTheme({

@@ -23,7 +23,7 @@ const styles = {
 }
 
 const ASinglePaintingCard = props => {
-  const { classes } = props
+  const { classes, admin } = props
 
   const name = pathOr("", ["painting", "name"], props)
   const id = pathOr("", ["painting", "_id"], props)
