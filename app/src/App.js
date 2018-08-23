@@ -6,7 +6,9 @@ import ListPaintings from "./pages/paintings"
 import PaintingView from "./pages/paintings/view"
 import AboutMe from "./pages/about-me"
 import FilterPaintings from "./pages/paintings/filter-paintings"
-import Admin from "./pages/admin"
+import Admin from "./pages/admin/admin"
+import AdminListPaintings from "./pages/admin/list-paintings"
+import PaintingEdit from "./pages/admin/edit"
 
 class App extends Component {
   render() {
@@ -19,6 +21,8 @@ class App extends Component {
           <Route exact path="/paintings/:id/view" component={PaintingView} />
           <Route exact path="/aboutme" component={AboutMe} />
           <Route exact path="/supersecretadmin" component={Admin} />
+          <Route exact path="/admin/paintings" component={AdminListPaintings} />
+          <Route exact path="/admin/:id/edit" component={PaintingEdit} />
         </Switch>
       </BrowserRouter>
     )
