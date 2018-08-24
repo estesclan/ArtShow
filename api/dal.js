@@ -17,4 +17,10 @@ const getPaintings = () =>
     })
     .then(docs => map(prop("doc"), docs.rows))
 
-module.exports = { getPaintings }
+/////////////////
+
+const editPainting = painting => {
+  return db.put(painting)
+}
+
+module.exports = { getPaintings, editPainting }

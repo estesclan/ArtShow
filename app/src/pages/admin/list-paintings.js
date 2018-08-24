@@ -19,7 +19,7 @@ const styles = {
 }
 
 const li = painting => (
-  <ASinglePaintingCard key={painting.name} painting={painting} />
+  <ASinglePaintingCard key={painting.name} painting={painting} admin />
 )
 
 const ListPaintings = props => {

@@ -6,12 +6,14 @@ const cors = require("cors")
 
 const paintings = require("./routes/paintings")
 const home = require("./routes/home")
+const admin = require("./routes/admin")
 
 app.use(bodyParser.json())
 app.use(cors({ credentials: true }))
 
 paintings(app)
 home(app)
+admin(app)
 
 app.use((err, req, res, next) => {
   res.status(err.status || 500).send(err.message)

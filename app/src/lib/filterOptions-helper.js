@@ -2,15 +2,13 @@ import {
   contains,
   always,
   anyPass,
-  allPass,
+  // allPass,
   compose,
   filter,
   isEmpty
 } from "ramda"
 
 export default (paintings, filterOptions) => {
-  console.log({ filterOptions })
-  console.log({ paintings })
   const filterSizes = () => {
     if (isEmpty(filterOptions.size)) {
       //   filterOptions.size = ["18x24", "24x36", "32x48"]
@@ -104,15 +102,7 @@ export default (paintings, filterOptions) => {
     return filteredTypePaintings
   }
   //console.log("filterTypes", filterTypes(paintings))
-  console.log(
-    "compose",
-    compose(
-      filterTypes(),
-      filterSubjects()
 
-      //filterSizes()
-    )(paintings)
-  )
   return compose(
     filterTypes(),
     filterSizes(),

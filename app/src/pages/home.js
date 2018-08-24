@@ -1,6 +1,5 @@
 import React from "react"
 import { connect } from "react-redux"
-import Typography from "@material-ui/core/Typography"
 import { Link } from "react-router-dom"
 import Button from "@material-ui/core/Button"
 import { withStyles } from "@material-ui/core/styles"
@@ -8,7 +7,6 @@ import { withStyles } from "@material-ui/core/styles"
 import withDrawer from "../components/withDrawer"
 import MenuAppBar from "../components/menuAppBar"
 import Carousel from "react-image-carousel"
-//require(“../../node_modules/react-image-carousel/lib/css/main.min.css”)
 const styles = theme => ({
   button: {
     margin: theme.spacing.unit
@@ -23,9 +21,8 @@ const Home = props => {
     "/jpeg-paintings/carousel-jpegs/Church-Street-by-Night2.jpg",
     "/jpeg-paintings/carousel-jpegs/Colorful-Room.jpg",
     "/jpeg-paintings/carousel-jpegs/Den.jpg"
-    //"/jpeg-paintings/carousel-jpegs/Strike-Indigo-Wall.jpg"
   ]
-  console.log(props)
+  //console.log(props)
   return (
     <div>
       <MenuAppBar title="ArtShow" />

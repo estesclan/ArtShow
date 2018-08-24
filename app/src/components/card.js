@@ -60,17 +60,19 @@ const ASinglePaintingCard = props => {
             </Button>
           </Link>
         </CardActions>
-        <CardActions>
-          <Link
-            to={`/paintings/${id}/edit`}
-            className="router-link"
-            style={{ textDecoration: "none" }}
-          >
-            <Button size="small" color="secondary">
-              Edit Painting
-            </Button>
-          </Link>
-        </CardActions>
+        {admin && (
+          <CardActions>
+            <Link
+              to={`/admin/${id}/edit`}
+              className="router-link"
+              style={{ textDecoration: "none" }}
+            >
+              <Button size="small" color="secondary">
+                Edit Painting
+              </Button>
+            </Link>
+          </CardActions>
+        )}
       </Card>
     </div>
   )

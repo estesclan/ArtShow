@@ -1,5 +1,4 @@
 import React from "react"
-import Typography from "@material-ui/core/Typography"
 import { Link } from "react-router-dom"
 import Button from "@material-ui/core/Button"
 import { withStyles } from "@material-ui/core/styles"
@@ -18,7 +17,7 @@ const Admin = props => {
 
   return (
     <div>
-      <MenuAppBar title="ArtShow" />
+      <MenuAppBar title="Super Secret Admin Page" />
       <div
         style={{
           marginTop: 85,

@@ -67,7 +67,7 @@ class FilterPaintings extends React.Component {
             display: "flex",
             flexDirection: "column",
             paddingTop: 15,
-            paddingLeft: 8,
+            paddingLeft: 24,
             marginTop: 80,
             marginBottom: 20,
             borderRadius: 15,
@@ -129,7 +129,7 @@ class FilterPaintings extends React.Component {
             display: "flex",
             flexDirection: "column",
             paddingTop: 15,
-            paddingLeft: 8,
+            paddingLeft: 24,
             marginBottom: 20,
             borderRadius: 15,
             backgroundColor: "#797979"
@@ -241,7 +241,7 @@ class FilterPaintings extends React.Component {
             display: "flex",
             flexDirection: "column",
             paddingTop: 15,
-            paddingLeft: 8,
+            paddingLeft: 24,
             borderRadius: 15,
             backgroundColor: "#797979"
           }}
@@ -302,7 +302,7 @@ class FilterPaintings extends React.Component {
 }
 
 const mapStateToProps = state => {
-  console.log("filter options", JSON.stringify(state.filterOptions))
+  //console.log("filter options", JSON.stringify(state.filterOptions))
   return {
     small: contains("18x24", state.filterOptions.size),
     medium: contains("24x36", state.filterOptions.size),
@@ -343,7 +343,6 @@ const mapActionsToProps = dispatch => {
       })
     },
     resetFilterForm: () => {
-      console.log("in reset!")
       dispatch({
         type: FILTERED_PAINTING_PAINTING_FORM_RESET
       })
